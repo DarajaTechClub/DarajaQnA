@@ -4,105 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daraja Girls Secondary School | Naibor, Kenya</title>
-  </head>
-  <body>
-
-    <!-- Header & Navigation -->
-    <header>
-      <h1>Daraja Girls Secondary School</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#history">Our History</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-      
-      <!-- Hero Image Section -->
-      <section id="hero">
-        <img src="daraja.png" alt="Students at Daraja Girls Secondary School campus">
-      </section>
-
-      <!-- About Section -->
-      <section id="about">
-        <h2>Who We Are</h2>
-        <p>
-          Daraja Academy is a fully sponsored, all-girls boarding secondary school located in Naibor, near Nanyuki in Laikipia County, Kenya. Founded in 2009, the school provides free, high-quality education and comprehensive support to its students, empowering them to become future leaders.
-        </p>
-      </section>
-
-      <!-- History Section -->
-      <section id="history">
-        <h2>Our History</h2>
-        <p>The academy officially opened its doors in 2009.</p>
-        <p>The visionary founders behind this initiative are Jenni and Jason Doherty.</p>
-      </section>
-
-    </main>
-
-    <!-- Footer Area -->
-    <footer>
-      <p>&copy; 2026 Daraja Girls Secondary School. Naibor, Laikipia County, Kenya.</p>
-    </footer>
-    
-      <!-- History Section -->
-      <section id="history">
-        <h2>Our History</h2>
-        <p>The academy officially opened its doors in 2009.</p>
-        <p>The visionary founders behind this initiative are Jenni and Jason Doherty.</p>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to visit us? Get in touch using the details below:</p>
-        
-        <ul>
-          <li><strong>Location:</strong> Nanyuki-Rumuruti Road, Naibor, Laikipia County, Kenya</li>
-          <li><strong>Postal Address:</strong> P.O. Box 1590 - 10400, Nanyuki, Kenya</li>
-          <li><strong>Email:</strong> <a href="mailto:info@daraja-academy.org">info@daraja-academy.org</a></li>
-        </ul>
-
-        <h3>Send Us a Message</h3>
-        <form action="#" method="POST">
-          <div>
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" name="name" required placeholder="Enter your full name">
-          </div>
-          <br>
-          <div>
-            <label for="email">Your Email:</label><br>
-            <input type="email" id="email" name="email" required placeholder="Enter your email address">
-          </div>
-          <br>
-          <div>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
-          </div>
-          <br>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-
-    </main>
-
-    <!-- Footer Area -->
-    <footer>
-      <p>&copy; 2026 Daraja Girls Secondary School. Naibor, Laikipia County, Kenya.</p>
-    </footer>
-
-  </body>
-</html>
-Use code with caution.✨ What Was AddedContact Navigation Link: Added <a href="#contact"> into the top menu so users can jump straight to your contact details.Physical & Mailing Addresses: Grounded the section with Daraja's actual geographical location in Naibor and their standard Nanyuki postal code (10400).Interactive Message Form: Built standard <form> inputs for a visitor's name, email, and message body so people on the website can easily communicate with the school setup.Would you like to add some CSS styling rules inside a <style> block to make this form look clean and align nicely? We can also add a placeholder link to Google Maps so visitors can see exactly where the Naibor campus is located.yesHere is the updated code containing beautifully styled components, a custom embedded map section, and responsive CSS.The color theme uses burgundy (#7A1C32) and golden yellow (#F9A825) to match Daraja Academy's brand identity. The design includes crisp modern fonts, a beautifully formatted contact form, and clean spacing.html<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daraja Girls Secondary School | Naibor, Kenya</title>
     <style>
       /* Global Colors and Settings */
       :root {
@@ -194,6 +95,39 @@ Use code with caution.✨ What Was AddedContact Navigation Link: Added <a href="
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+
+      /* Vision & Mission Cards */
+      .vision-mission-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .vm-card {
+        background-color: var(--light-bg);
+        padding: 2rem;
+        border-radius: 8px;
+        border-left: 5px solid var(--secondary-color);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+
+      .vm-card h3 {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        margin-top: 0;
+      }
+
+      .vm-card p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 768px) {
+        .vision-mission-container {
+          grid-template-columns: 1fr;
+        }
       }
 
       /* Contact Grid Layout */
@@ -309,6 +243,7 @@ Use code with caution.✨ What Was AddedContact Navigation Link: Added <a href="
       <nav>
         <ul>
           <li><a href="#about">About Us</a></li>
+          <li><a href="#vision-mission">Vision & Mission</a></li>
           <li><a href="#history">Our History</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
@@ -327,8 +262,29 @@ Use code with caution.✨ What Was AddedContact Navigation Link: Added <a href="
       <section id="about">
         <h2>Who We Are</h2>
         <p>
-          Daraja Academy is a fully sponsored, all-girls boarding secondary school located in Naibor, near Nanyuki in Laikipia County, Kenya. Founded in 2009, the school provides free, high-quality education and comprehensive support to its students, empowering them to become future leaders.
+          Daraja Academy is a fully sponsored, all-girls boarding secondary school located in Naibor, near Nanyuki in Laikipia County, Kenya. Founded in 2009, the school provides free, high-quality education to deserving girls from disadvantaged backgrounds.
         </p>
+      </section>
+
+      <!-- Vision & Mission Section -->
+      <section id="vision-mission">
+        <h2>Vision & Mission</h2>
+        
+        <div class="vision-mission-container">
+          <div class="vm-card">
+            <h3>🎯 Our Vision</h3>
+            <p>
+              To empower young women through quality education and mentorship, enabling them to become confident leaders, innovators, and agents of positive change in their communities and beyond.
+            </p>
+          </div>
+
+          <div class="vm-card">
+            <h3>💼 Our Mission</h3>
+            <p>
+              To provide accessible, world-class secondary education to talented girls from underserved communities, fostering academic excellence, critical thinking, and strong character values that prepare them for meaningful careers and civic responsibility.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- History Section -->
@@ -396,10 +352,6 @@ Use code with caution.✨ What Was AddedContact Navigation Link: Added <a href="
     <footer>
       <p>&copy; 2026 Daraja Girls Secondary School. Naibor, Laikipia County, Kenya.</p>
     </footer>
-
-  </body>
-</html>
-Use code with caution.Would you like me to show you how to link a real, working form handler backend like Formspree or Netlify Forms so you can receive the emails when people test the site, or should we work on the layout style for your student stories next?
 
   </body>
 </html>

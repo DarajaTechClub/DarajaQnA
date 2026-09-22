@@ -1,5 +1,5 @@
 /* Daraja QnA Chatbot Styles */
-
+<link rel="stylesheet" href="chatbot.css">
 /* Chat Button (Floating) */
 #chat-button {
   position: fixed;
